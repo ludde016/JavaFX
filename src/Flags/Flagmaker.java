@@ -19,7 +19,7 @@ public class Flagmaker {
 		hor.setHeight(width/10);
 		hor.setWidth(width);
 		hor.setTranslateY(2 * (width/10));
-		back.setFill(d);
+		hor.setFill(d);
 		
 		flag.getChildren().add(hor);
 		
@@ -27,7 +27,7 @@ public class Flagmaker {
 		ver.setHeight(width/2);
 		ver.setWidth(width/10);
 		ver.setTranslateX(2 * (width/6));
-		back.setFill(d);
+		ver.setFill(d);
 		
 		flag.getChildren().add(ver);
 		
