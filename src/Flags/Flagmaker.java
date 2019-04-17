@@ -71,6 +71,14 @@ public class Flagmaker {
 		return flag2;
 				
 	}
+	
+	public static Flag kongo() {
+		
+		Flag flag3 = new Flag();
+		
+		return flag3; 
+		
+	}
 
 }
 

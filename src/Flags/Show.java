@@ -16,9 +16,10 @@ public class Show extends Application {
 		double height = input.nextInt();
 		double width = input.nextInt();
 		Group root = new Group();
-		Scene scene = new Scene(root, height, width, Color.WHITE);
+		Scene scene = new Scene(root, width, height, Color.WHITE);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		input.close();
 		
 	//	root.getChildren().add(Flagmaker.nordic(Color.RED,Color.YELLOW,width)); // Ändra färg så kan du få till minst 8 olika flaggor
 		root.getChildren().add(Flagmaker.tricolor(Color.WHITE,Color.BLUE,Color.RED,width)); // Ändra färg så kan du få till minst 7 olika flaggor
