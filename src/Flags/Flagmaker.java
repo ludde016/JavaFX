@@ -35,15 +35,35 @@ public class Flagmaker {
 		
 	}
 	
-	public static Flag tricolor(Color c, Color d, double width) {
+	public static Flag tricolor(Color e, Color f, Color g, double width) {
 		
 		Flag flag2 = new Flag();
 		Rectangle back = new Rectangle();
 		back.setHeight(width/2);
 		back.setWidth(width);
-		back.setFill(c);
 		
 		flag2.getChildren().add(back);
+		
+		Rectangle hor = new Rectangle();
+		hor.setHeight(width/6);
+		hor.setWidth(width);
+		hor.setFill(e);
+		
+		flag2.getChildren().add(hor);
+		
+		Rectangle hor2 = new Rectangle();
+		hor2.setHeight(width/6);
+		hor2.setWidth(width);
+		hor2.setFill(f);
+		
+		flag2.getChildren().add(hor2);
+		
+		Rectangle hor3 = new Rectangle();
+		hor3.setHeight(width/6);
+		hor3.setWidth(width);
+		hor3.setFill(g);
+		
+		flag2.getChildren().add(hor3);
 
 		
 		return flag2;
