@@ -34,6 +34,21 @@ public class Flagmaker {
 		return flag; 
 		
 	}
+	
+	public static Flag tricolor(Color c, Color d, double width) {
+		
+		Flag flag2 = new Flag();
+		Rectangle back = new Rectangle();
+		back.setHeight(width/2);
+		back.setWidth(width);
+		back.setFill(c);
+		
+		flag2.getChildren().add(back);
+
+		
+		return flag2;
+				
+	}
 
 }
 
