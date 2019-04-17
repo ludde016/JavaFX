@@ -77,19 +77,32 @@ public class Flagmaker {
 		
 		Flag flag3 = new Flag();
 		
+		Rectangle back = new Rectangle();
+		back.setHeight(width/2);
+		back.setWidth(width);
+		
 		Polygon triangle1 = new Polygon(0,0,
-				0,height,
+				0,(width/2),
 				width,0); 
-		triangle1.setFill(Color.GREEN);
+		triangle1.setFill(Color.LIMEGREEN);
 		
 		flag3.getChildren().add(triangle1);
 
-		Polygon triangle2 = new Polygon(width,height,
-				height,0,
-				0,width); 
+		Polygon triangle2 = new Polygon(width,(width/2),
+				0,(width/2),
+				width,0); 
 		triangle2.setFill(Color.RED);
 		
 		flag3.getChildren().add(triangle2);
+		
+		Polygon triangle3 = new Polygon(width,0,
+				(2 *(width/3)),0,
+				0,(width/2),
+				(width/3),(width/2),
+				width,0); 
+		triangle3.setFill(Color.YELLOW);
+		
+		flag3.getChildren().add(triangle3);
 		
 		return flag3; 
 		
