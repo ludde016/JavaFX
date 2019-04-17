@@ -5,7 +5,7 @@ import javafx.scene.shape.Rectangle;
 
 public class Flagmaker {
 	
-	public static Flag nordic(Color c, double width) {
+	public static Flag nordic(Color c, Color d, double width) {
 		
 		Flag flag = new Flag();
 		Rectangle back = new Rectangle();
@@ -19,8 +19,17 @@ public class Flagmaker {
 		hor.setHeight(width/10);
 		hor.setWidth(width);
 		hor.setTranslateY(2 * (width/10));
+		back.setFill(d);
 		
 		flag.getChildren().add(hor);
+		
+		Rectangle ver = new Rectangle();
+		ver.setHeight(width/2);
+		ver.setWidth(width/10);
+		ver.setTranslateX(2 * (width/6));
+		back.setFill(d);
+		
+		flag.getChildren().add(ver);
 		
 		return flag; 
 		
