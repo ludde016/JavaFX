@@ -13,8 +13,18 @@ public class Flagmaker {
 		back.setWidth(width);
 		back.setFill(c);
 		
+		flag.getChildren().add(back);
+		
+		Rectangle hor = new Rectangle();
+		hor.setHeight(width/10);
+		hor.setWidth(width);
+		hor.setTranslateY(2 * (width/10));
+		
+		flag.getChildren().add(hor);
+		
 		return flag; 
 		
 	}
 
 }
+
