@@ -1,6 +1,7 @@
 package Flags;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 public class Flagmaker {
@@ -72,9 +73,23 @@ public class Flagmaker {
 				
 	}
 	
-	public static Flag kongo() {
+	public static Flag kongo(double width, double height) {
 		
 		Flag flag3 = new Flag();
+		
+		Polygon triangle1 = new Polygon(0,0,
+				0,height,
+				width,0); 
+		triangle1.setFill(Color.GREEN);
+		
+		flag3.getChildren().add(triangle1);
+
+		Polygon triangle2 = new Polygon(width,height,
+				height,0,
+				0,width); 
+		triangle2.setFill(Color.RED);
+		
+		flag3.getChildren().add(triangle2);
 		
 		return flag3; 
 		
