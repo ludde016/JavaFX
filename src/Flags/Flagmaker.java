@@ -54,6 +54,7 @@ public class Flagmaker {
 		Rectangle hor2 = new Rectangle();
 		hor2.setHeight(width/6);
 		hor2.setWidth(width);
+		hor2.setTranslateY(width/6);
 		hor2.setFill(f);
 		
 		flag2.getChildren().add(hor2);
@@ -61,6 +62,7 @@ public class Flagmaker {
 		Rectangle hor3 = new Rectangle();
 		hor3.setHeight(width/6);
 		hor3.setWidth(width);
+		hor3.setTranslateY(width/3);
 		hor3.setFill(g);
 		
 		flag2.getChildren().add(hor3);

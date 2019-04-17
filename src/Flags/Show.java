@@ -20,8 +20,9 @@ public class Show extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
-		root.getChildren().add(Flagmaker.nordic(Color.RED,Color.YELLOW,width)); // Ändra färg så kan du få till 8 olika flaggor
-
+	//	root.getChildren().add(Flagmaker.nordic(Color.RED,Color.YELLOW,width)); // Ändra färg så kan du få till minst 8 olika flaggor
+		root.getChildren().add(Flagmaker.tricolor(Color.WHITE,Color.BLUE,Color.RED,width)); // Ändra färg så kan du få till minst 7 olika flaggor
+		
 	}
 	public static void main(String[] args) {
 		launch();
