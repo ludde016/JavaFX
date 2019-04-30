@@ -13,8 +13,52 @@ public class Flagmaker {
 		return nordic(Color.BLUE, Color.YELLOW, width);
 	}
 	
+	public static Flag denmark(double width) {
+		return nordic(Color.RED, Color.WHITE, width);
+	}
+	
+	public static Flag finland(double width) {
+		return nordic(Color.WHITE, Color.BLUE, width);
+	}
+	
+	public static Flag skane(double width) {
+		return nordic(Color.RED, Color.YELLOW, width);
+	}
+	
+	public static Flag kalmar(double width) {
+		return nordic(Color.YELLOW, Color.RED, width);
+	}
+	
+	public static Flag shetland(double width) {
+		return nordic(Color.BLUE, Color.WHITE, width);
+	}
+	
+	public static Flag ostergötland(double width) {
+		return nordic(Color.YELLOW, Color.BLUE, width);
+	}
+	
+	public static Flag gotland(double width) {
+		return nordic(Color.YELLOW, Color.GREEN, width);
+	}
+	
+	public static Flag aland(double width) {
+		return nordic(Color.DARKGREEN, Color.YELLOW, width);
+	}
+	
 	public static Flag germany(double width) {
 		return tricolor(Color.BLACK, Color.RED, Color.YELLOW, width);
+	}
+	
+	public static Flag russia(double width) {
+		return tricolor(Color.WHITE, Color.BLUE, Color.RED, width);
+	}
+	
+	public static Flag yugoslavia(double width) {
+		return tricolor(Color.BLUE, Color.WHITE, Color.RED, width);
+	}
+	
+	public static Flag oldgermany(double width) {
+		return tricolor(Color.BLACK, Color.WHITE, Color.RED, width);
 	}
 	
 	private static Flag nordic(Color c, Color d, double width) {

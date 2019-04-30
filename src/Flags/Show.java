@@ -13,17 +13,26 @@ public class Show extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		Scanner input = new Scanner(System.in);
-		double height = input.nextInt();
 		double width = input.nextInt();
 		Group root = new Group();
-		Scene scene = new Scene(root, width, height, Color.WHITE);
+		Scene scene = new Scene(root, width, width/2, Color.WHITE);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		input.close();
 		
-	//	root.getChildren().add(Flagmaker.nordic(Color.RED,Color.YELLOW,width)); // Ändra färg så kan du få till minst 8 olika flaggor
-	//	root.getChildren().add(Flagmaker.tricolor(Color.WHITE,Color.BLUE,Color.RED,width)); // Ändra färg så kan du få till minst 7 olika flaggor
-	//Skapa 3 flaggor
+	//	root.getChildren().add(Flagmaker.sweden(width)); 
+	//	root.getChildren().add(Flagmaker.denmark(width)); 
+	//	root.getChildren().add(Flagmaker.finland(width)); 
+	//	root.getChildren().add(Flagmaker.skane(width)); 
+	//	root.getChildren().add(Flagmaker.kalmar(width));
+	//	root.getChildren().add(Flagmaker.shetland(width));
+	//	root.getChildren().add(Flagmaker.ostergötland(width)); 
+	//	root.getChildren().add(Flagmaker.gotland(width));
+	//	root.getChildren().add(Flagmaker.aland(width));
+	//	root.getChildren().add(Flagmaker.germany(width));
+	//	root.getChildren().add(Flagmaker.russia(width));
+	//	root.getChildren().add(Flagmaker.yugoslavia(width)); 
+	//	root.getChildren().add(Flagmaker.oldgermany(width)); 
 	//	root.getChildren().add(Flagmaker.kongo(width));
 	//	root.getChildren().add(Flagmaker.kuwait(width));
 	//	root.getChildren().add(Flagmaker.laos(width));
