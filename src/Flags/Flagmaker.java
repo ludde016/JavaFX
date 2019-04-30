@@ -1,6 +1,9 @@
 package Flags;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.ArcType;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
@@ -103,7 +106,44 @@ public class Flagmaker {
 	public static Flag laos(double width) {
 
 		Flag flag4 = new Flag();
-
+		
+		Rectangle back = new Rectangle();
+		back.setHeight(width / 2);
+		back.setWidth(width);
+		
+		flag4.getChildren().add(back);
+		
+		Rectangle red1 = new Rectangle();
+		red1.setHeight(width / 8);
+		red1.setWidth(width);
+		red1.setFill(Color.RED);
+		
+		flag4.getChildren().add(red1);
+		
+		Rectangle blue = new Rectangle();
+		blue.setHeight(width/4);
+		blue.setWidth(width);
+		blue.setTranslateY(width / 8);
+		blue.setFill(Color.BLUE);
+		
+		flag4.getChildren().add(blue);
+		
+		Rectangle red2 = new Rectangle();
+		red2.setHeight(width / 8);
+		red2.setWidth(width);
+		red2.setTranslateY(width/2.666);
+		red2.setFill(Color.RED);
+		
+		flag4.getChildren().add(red2);
+		
+		Circle white = new Circle();
+		white.setRadius(width/9);
+		white.setFill(Color.WHITE);
+		white.setTranslateX(width/2);
+		white.setTranslateY(width/4);
+		
+		flag4.getChildren().add(white);
+		
 		return flag4;
 
 	}
@@ -111,6 +151,50 @@ public class Flagmaker {
 	public static Flag greenland(double width) {
 
 		Flag flag5 = new Flag();
+		
+		Rectangle back = new Rectangle();
+		back.setHeight(width / 2); 
+		back.setWidth(width);
+		
+		flag5.getChildren().add(back);
+		
+		Rectangle white = new Rectangle();
+		white.setHeight(width / 4);
+		white.setWidth(width);
+		white.setFill(Color.WHITE);
+		
+		flag5.getChildren().add(white);
+		
+		Rectangle red = new Rectangle();
+		red.setHeight(width / 4);
+		red.setWidth(width);
+		red.setTranslateY(width/4);
+		red.setFill(Color.RED);
+		
+		flag5.getChildren().add(red);
+		
+		Arc arc = new Arc();
+		arc.setCenterX(width/2.5);
+		arc.setCenterY(width/4);
+		arc.setRadiusX(width/5);
+		arc.setRadiusY(width/5);
+		arc.setLength(180.0f);
+		arc.setType(ArcType.ROUND);
+		arc.setFill(Color.RED);
+		
+		flag5.getChildren().add(arc); 
+		
+		Arc arc2 = new Arc();
+		arc2.setCenterX(width/2.5);
+		arc2.setCenterY(width/4);
+		arc2.setRadiusX(width/5);
+		arc2.setRadiusY(width/5);
+		arc2.setLength(180.0f);
+		arc2.setStartAngle(180.0f);
+		arc2.setType(ArcType.ROUND);
+		arc2.setFill(Color.WHITE);
+		
+		flag5.getChildren().add(arc2); 
 
 		return flag5;
 
@@ -121,13 +205,13 @@ public class Flagmaker {
 		Flag flag6 = new Flag();
 
 		Rectangle back = new Rectangle();
-		back.setHeight(width / 2);
+		back.setHeight(width / 2); // Höjd = bredd/2
 		back.setWidth(width);
 
 		flag6.getChildren().add(back);
 
 		Rectangle hor = new Rectangle();
-		hor.setHeight(width / 6);
+		hor.setHeight(width / 6); // Höjd/3 = bredd/6
 		hor.setWidth(width);
 		hor.setFill(Color.GREEN);
 
