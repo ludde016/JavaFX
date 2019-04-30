@@ -23,6 +23,7 @@ public class Show extends Application {
 		
 	//	root.getChildren().add(Flagmaker.nordic(Color.RED,Color.YELLOW,width)); // Ändra färg så kan du få till minst 8 olika flaggor
 	//	root.getChildren().add(Flagmaker.tricolor(Color.WHITE,Color.BLUE,Color.RED,width)); // Ändra färg så kan du få till minst 7 olika flaggor
+	//Skapa 3 flaggor
 	//	root.getChildren().add(Flagmaker.kongo(width));
 	//	root.getChildren().add(Flagmaker.kuwait(width));
 	//	root.getChildren().add(Flagmaker.laos(width));
