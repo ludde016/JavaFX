@@ -20,7 +20,9 @@ public class Show extends Application {
 		primaryStage.show();
 		input.close();
 		
-	//	root.getChildren().add(Flagmaker.sweden(width)); 
+	// Här finns alla flaggor, ta bara bort kommentartecknen framför den flagga du vill ha
+		
+	//	root.getChildren().add(Flagmaker.sweden(width));
 	//	root.getChildren().add(Flagmaker.denmark(width)); 
 	//	root.getChildren().add(Flagmaker.finland(width)); 
 	//	root.getChildren().add(Flagmaker.skane(width)); 
@@ -36,7 +38,7 @@ public class Show extends Application {
 	//	root.getChildren().add(Flagmaker.kongo(width));
 	//	root.getChildren().add(Flagmaker.kuwait(width));
 	//	root.getChildren().add(Flagmaker.laos(width));
-		root.getChildren().add(Flagmaker.greenland(width));
+	//	root.getChildren().add(Flagmaker.greenland(width));
 	}
 	public static void main(String[] args) {
 		launch();

@@ -8,6 +8,11 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 public class Flagmaker {
+	
+	/*Alla metoder fram till nästa javadoc är enkla metoder som använder sig av nordic-metoden och tricolor-metoden
+	 * för att åstadkomma 13 relativt enkla flaggor. Dessa används i Show.java. 
+	 * @param double width
+	 */
 
 	public static Flag sweden(double width) {
 		return nordic(Color.BLUE, Color.YELLOW, width);
@@ -61,6 +66,14 @@ public class Flagmaker {
 		return tricolor(Color.BLACK, Color.WHITE, Color.RED, width);
 	}
 	
+	/*Denna metoden används för att skapa alla flaggor som är baserade på det nordiska-formatet, 
+	 * t.ex Sverige och Danmark flaggorna. Color c bestämmer färgen för kvadraterna, Color d bestämmer 
+	 * färgen för korsen. 
+	 * @param Color c
+	 * @param Color d
+	 * @param double width
+	 */
+	
 	private static Flag nordic(Color c, Color d, double width) {
 
 		Flag flag = new Flag();
@@ -90,6 +103,14 @@ public class Flagmaker {
 		return flag;
 
 	}
+	/*Denna metoden används för att skapa alla flaggor som är baserade på det trefärgs-formatet, 
+	 * t.ex Tysklands och Rysslands flaggor. Color e bestämmer färgen för översta kvadraten, Color f bestämmer 
+	 * färgen för mitterska kvadraten och Color g bestämmer färgen för understa kvadraten.. 
+	 * @param Color e
+	 * @param Color f
+	 * @param Color g
+	 * @param double width
+	 */
 
 	private static Flag tricolor(Color e, Color f, Color g, double width) {
 
