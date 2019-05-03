@@ -21,6 +21,7 @@ public class Show extends Application {
 		input.close();
 		
 	// Här finns alla flaggor, ta bara bort kommentartecknen framför den flagga du vill ha
+	// OBS! Glöm inte skriva in den bredd du vill ha på din flagga, höjd kommer med automatiskt. 
 		
 	//	root.getChildren().add(Flagmaker.sweden(width));
 	//	root.getChildren().add(Flagmaker.denmark(width)); 
@@ -38,8 +39,9 @@ public class Show extends Application {
 	//	root.getChildren().add(Flagmaker.kongo(width));
 	//	root.getChildren().add(Flagmaker.kuwait(width));
 	//	root.getChildren().add(Flagmaker.laos(width));
-	//	root.getChildren().add(Flagmaker.greenland(width));
+	//  root.getChildren().add(Flagmaker.greenland(width));
 	}
+	
 	public static void main(String[] args) {
 		launch();
 	}
