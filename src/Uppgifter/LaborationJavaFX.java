@@ -65,7 +65,7 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 	}
 
 	public void ChangeColor() {
-		canvas = new Canvas(500, 500);
+		canvas = new Canvas(500, 500); //Ändrade här
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		if (color == true) {
 			color = false;
@@ -76,13 +76,13 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 			gc.setFill(Color.SKYBLUE);
 			gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 		}
-		root.getChildren().add(NewGroup()); // Varför funkar inte detta? P.s: jag vet att den kommer täcka knapparna med
+		root.getChildren().add(NewGroup()); // Ändrade här med. Varför funkar inte detta? P.s: jag vet att den kommer täcka knapparna med
 										// löses sedan
 	}
 
 	private Group NewGroup() {
 		Group root2 = new Group();
-		root2.getChildren().add(canvas);
+		root2.getChildren().add(canvas); //Och här
 		root2.getChildren().add(change);
 		root2.getChildren().add(close);
 		return root2;
