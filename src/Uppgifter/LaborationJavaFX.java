@@ -21,19 +21,14 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 	Group group;
 	Scene scene;
 
-	public static void main(String[] args) {
-
-		launch();
-	}
-
 	public void start(Stage primaryStage) throws Exception {
 
 		root = new Group();
-		
+		buttons();
 		ChangeColor();
 
 
-		//root.getChildren().add(NewGroup()); // Anropar metoden "NewGroup" för att lägga till knapparna
+		updateRoot(); 
 		scene = new Scene(root, 500, 500);
 		primaryStage.setScene(scene);
 		primaryStage.show();
@@ -51,6 +46,10 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 		}
 
 	}
+	
+	private void updateRoot() {
+		root.getChildren().add(NewGroup());
+	}
 
 	private void buttons() {
 
@@ -64,7 +63,7 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 	}
 
 	public void ChangeColor() {
-		canvas = new Canvas(500, 500); //Ändrade här
+		canvas = new Canvas(500, 500); 
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		if (color == true) {
 			color = false;
@@ -75,16 +74,20 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 			gc.setFill(Color.SKYBLUE);
 			gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 		}
-		root.getChildren().add(NewGroup()); // Ändrade här med. Varför funkar inte detta? P.s: jag vet att den kommer täcka knapparna med
-										// löses sedan
+		updateRoot();
 	}
 
 	private Group NewGroup() {
 		Group root2 = new Group();
-		root2.getChildren().add(canvas); //Och här
+		root2.getChildren().add(canvas); 
 		root2.getChildren().add(change);
 		root2.getChildren().add(close);
 		return root2;
+	}
+	
+	public static void main(String[] args) {
+
+		launch();
 	}
 
 }
