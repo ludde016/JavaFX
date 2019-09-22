@@ -28,14 +28,13 @@ public class LaborationJavaFX extends Application implements EventHandler<Action
 
 	public void start(Stage primaryStage) throws Exception {
 
-		ChangeColor();
-		buttons();
-		group = NewGroup();
-
 		root = new Group();
+		
+		ChangeColor();
 
-		root.getChildren().add(group); // Anropar metoden "NewGroup" för att lägga till knapparna
-		scene = new Scene(root, 500, 500, Color.SKYBLUE);
+
+		//root.getChildren().add(NewGroup()); // Anropar metoden "NewGroup" för att lägga till knapparna
+		scene = new Scene(root, 500, 500);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
