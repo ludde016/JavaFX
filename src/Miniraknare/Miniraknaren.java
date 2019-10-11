@@ -26,9 +26,9 @@ public class Miniraknaren extends Application {
 		
 
 		TextField inputField = new TextField();
-		inputField.setText("Input");
+		inputField.setText("");
 		TextField outputField = new TextField();
-		outputField.setText("Output");
+		outputField.setText("");
 		displayField.getChildren().addAll(inputField, outputField);
 		root.setTop(displayField);
 
@@ -36,9 +36,14 @@ public class Miniraknaren extends Application {
 				"\u221A" };
 		
 		for (int i = 0; i < numpadKeys.length; i++) {
+			String keyText = numpadKeys[i];
 			Button temp = new Button(numpadKeys[i]);
 			temp.setFont(Font.font("Verdana", 20));
 			temp.setPrefSize(100, 100);
+			temp.setOnAction(event ->
+			{
+				inputField.textProperty().set(inputField.textProperty().get() + keyText);
+			});
 			numpad.add(temp, i % 4, (int) Math.ceil(i / 4));
 
 		} // Slut (numpad)
