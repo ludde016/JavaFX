@@ -22,7 +22,7 @@ public class Miniraknaren extends Application {
 
 		// Skapa en metod som uppdaterar textfield
 
-		GridPane numpad = new GridPane(); // Kod för numpad
+		GridPane numpad = new GridPane();
 		
 
 		TextField inputField = new TextField();
@@ -31,9 +31,11 @@ public class Miniraknaren extends Application {
 		outputField.setText("");
 		displayField.getChildren().addAll(inputField, outputField);
 		root.setTop(displayField);
+		
+		// Kod för numpad, kan kanske göras till en egen metod
 
-		String[] numpadKeys = { "1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", "C", "0", "=", "/", "%",
-				"\u221A" };
+		String[] numpadKeys = { "1", "2", "3", " + ", "4", "5", "6", " - ", "7", "8", "9", " * ", "C", "0", " = ", " / ", " % ",
+				" \u221A ", "." };
 		
 		for (int i = 0; i < numpadKeys.length; i++) {
 			String keyText = numpadKeys[i];
@@ -42,7 +44,16 @@ public class Miniraknaren extends Application {
 			temp.setPrefSize(100, 100);
 			temp.setOnAction(event ->
 			{
-				inputField.textProperty().set(inputField.textProperty().get() + keyText);
+				if (temp.textProperty().get() == " = ") {
+					inputField.clear();
+					Calculations.Calc(); //How do this?
+					//Anropa metod i annan klass för ett utföra beräkningar
+					//Anropa metod med svaret som skriver ut det i outputField
+				}
+				//Ha en else-if sats för att stoppa bokstäver från att hamna i textfield??? Bra idé?
+				else {
+				inputField.textProperty().set(inputField.textProperty().get() + keyText); //ansvara för alla tecken som visas i displayField
+				}
 			});
 			numpad.add(temp, i % 4, (int) Math.ceil(i / 4));
 
