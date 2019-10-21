@@ -2,15 +2,5 @@ package Miniraknare;
 
 abstract class Calculations {
 
-	public abstract void Calc(); 
+	public abstract double Calc(double a, double b);
 }
-
-	class equation extends Calculations {
-
-		@Override
-		public static void Calc() {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}

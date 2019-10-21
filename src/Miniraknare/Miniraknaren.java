@@ -45,8 +45,8 @@ public class Miniraknaren extends Application {
 			temp.setOnAction(event ->
 			{
 				if (temp.textProperty().get() == " = ") {
+					equation.Calc(inputField);
 					inputField.clear();
-					Calculations.Calc(); //How do this?
 					//Anropa metod i annan klass för ett utföra beräkningar
 					//Anropa metod med svaret som skriver ut det i outputField
 				}
