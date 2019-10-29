@@ -29,19 +29,19 @@ public class Functionality {
 				Calculations f = new Division(); 
 				content[0] = Double.toString(f.Calc(Double.parseDouble(content[0]), Double.parseDouble(content[i+1])));
 
-			} else if (content[i].equals("\\u221A")) {
+			} else if (content[i].equals("\u221A")) {
 				
-				Calculations g = new addition(); //Fixa detta.
-				content[0] = Double.toString(g.Calc(Double.parseDouble(content[0]), Double.parseDouble(content[i+1])));
+				Calculations g = new SquareRoot(); //Fixa detta.
+				content[0] = Double.toString(g.Sqrt(Double.parseDouble(content[i+1])));
 
 			} else if (content[i].equals("%")) {
 				
-				Calculations h = new addition(); //Fixa detta.
+				Calculations h = new Procent(); //Fixa detta.
 				content[0] = Double.toString(h.Calc(Double.parseDouble(content[0]), Double.parseDouble(content[i+1])));
 
 			}
 			else {
-				
+					//Ja du, else vad?
 			}
 		}
 		outputs(content);

@@ -48,8 +48,6 @@ public class Miniraknaren extends Application {
 				if (temp.textProperty().get() == " = ") {
 					Functionality.Inputs(inputField);
 					inputField.clear();
-					//Anropa metod i annan klass för ett utföra beräkningar
-					//Anropa metod med svaret som skriver ut det i outputField
 				}
 				//Ha en else-if sats för att stoppa bokstäver från att hamna i textfield??? Bra idé?
 				else {
