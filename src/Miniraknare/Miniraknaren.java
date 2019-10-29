@@ -12,6 +12,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Miniraknaren extends Application {
+	
+	static TextField outputField = new TextField();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -27,7 +29,6 @@ public class Miniraknaren extends Application {
 
 		TextField inputField = new TextField();
 		inputField.setText("");
-		TextField outputField = new TextField();
 		outputField.setText("");
 		displayField.getChildren().addAll(inputField, outputField);
 		root.setTop(displayField);
@@ -45,7 +46,7 @@ public class Miniraknaren extends Application {
 			temp.setOnAction(event ->
 			{
 				if (temp.textProperty().get() == " = ") {
-					//inputs(inputField);
+					Functionality.Inputs(inputField);
 					inputField.clear();
 					//Anropa metod i annan klass för ett utföra beräkningar
 					//Anropa metod med svaret som skriver ut det i outputField
@@ -66,6 +67,10 @@ public class Miniraknaren extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
+	}
+	
+	public static void outputText(String s) {
+		outputField.setText(s);
 	}
 
 	public static void main(String[] args) {
