@@ -4,6 +4,10 @@ import javafx.scene.control.TextField;
 
 public class Functionality {
 
+	/**
+	 * 
+	 * @param input
+	 */
 	public static void Inputs(TextField input) {
 		String[] content = input.getText().split(" "); // Gör en string[] av TextField
 		for (int i = 0; i < content.length - 1; i++) {
@@ -47,6 +51,10 @@ public class Functionality {
 		outputs(content);
 		
 	}
+	/**
+	 * 
+	 * @param content
+	 */
 	public static void outputs(String[] content) {
 		Miniraknaren.outputText(content[0]);
 	}

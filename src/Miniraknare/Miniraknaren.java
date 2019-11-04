@@ -1,10 +1,12 @@
 package Miniraknare;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -14,6 +16,8 @@ import javafx.stage.Stage;
 public class Miniraknaren extends Application {
 	
 	static TextField outputField = new TextField();
+	static TextField save = new TextField();
+	static TextField inputField = new TextField();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -22,20 +26,20 @@ public class Miniraknaren extends Application {
 		
 		VBox displayField = new VBox();
 
-		// Skapa en metod som uppdaterar textfield
+		// Note: Dubbel tecken fungerar inte i miniräknaren (t.ex 50 + - 50)
 
 		GridPane numpad = new GridPane();
 		
-
-		TextField inputField = new TextField();
 		inputField.setText("");
 		outputField.setText("");
+		inputField.setEditable(false); 
+		outputField.setEditable(false);
 		displayField.getChildren().addAll(inputField, outputField);
 		root.setTop(displayField);
 		
 		// Kod för numpad, kan kanske göras till en egen metod
 
-		String[] numpadKeys = { "1", "2", "3", " + ", "4", "5", "6", " - ", "7", "8", "9", " * ", "C", "0", " = ", " / ", " % ",
+		String[] numpadKeys = { "1", "2", "3", " + ", "4", "5", "6", " - ", "7", "8", "9", " * ", " C ", "0", " = ", " / ", " % ",
 				" \u221A ", "." };
 		
 		for (int i = 0; i < numpadKeys.length; i++) {
@@ -49,8 +53,13 @@ public class Miniraknaren extends Application {
 					Functionality.Inputs(inputField);
 					inputField.clear();
 				}
+				else if (temp.textProperty().get() == " C ") {
+					inputField.clear();
+					outputField.clear();
+				}
 				//Ha en else-if sats för att stoppa bokstäver från att hamna i textfield??? Bra idé?
 				else {
+					save = inputField;
 				inputField.textProperty().set(inputField.textProperty().get() + keyText); //ansvara för alla tecken som visas i displayField
 				}
 			});
@@ -64,13 +73,19 @@ public class Miniraknaren extends Application {
 
 		primaryStage.setScene(scene);
 		primaryStage.show();
-
+		
 	}
-	
+	/**
+	 * 
+	 * @param s
+	 */
 	public static void outputText(String s) {
 		outputField.setText(s);
 	}
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		launch();
