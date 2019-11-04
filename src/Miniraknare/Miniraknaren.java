@@ -1,12 +1,9 @@
 package Miniraknare;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -16,7 +13,6 @@ import javafx.stage.Stage;
 public class Miniraknaren extends Application {
 	
 	static TextField outputField = new TextField();
-	static TextField save = new TextField();
 	static TextField inputField = new TextField();
 
 	@Override
@@ -36,8 +32,6 @@ public class Miniraknaren extends Application {
 		outputField.setEditable(false);
 		displayField.getChildren().addAll(inputField, outputField);
 		root.setTop(displayField);
-		
-		// Kod för numpad, kan kanske göras till en egen metod
 
 		String[] numpadKeys = { "1", "2", "3", " + ", "4", "5", "6", " - ", "7", "8", "9", " * ", " C ", "0", " = ", " / ", " % ",
 				" \u221A ", "." };
@@ -57,35 +51,33 @@ public class Miniraknaren extends Application {
 					inputField.clear();
 					outputField.clear();
 				}
-				//Ha en else-if sats för att stoppa bokstäver från att hamna i textfield??? Bra idé?
 				else {
-					save = inputField;
-				inputField.textProperty().set(inputField.textProperty().get() + keyText); //ansvara för alla tecken som visas i displayField
+				inputField.textProperty().set(inputField.textProperty().get() + keyText);
 				}
 			});
 			numpad.add(temp, i % 4, (int) Math.ceil(i / 4));
 
-		} // Slut (numpad)
+		} 
 
 		root.setCenter(numpad);
 
 		Scene scene = new Scene(root, 300, 300);
 
 		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
 		primaryStage.show();
 		
 	}
 	/**
+	 * Metoden tar in en String från klassen functionality vilket den sedan skriver ut i outputField.
+	 * Denna String är svaret från det som skrevs in i inputField. 
 	 * 
-	 * @param s
+	 * @param answer 
 	 */
-	public static void outputText(String s) {
-		outputField.setText(s);
+	public static void outputText(String answer) {
+		outputField.setText(answer);
 	}
-	/**
-	 * 
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 
 		launch();

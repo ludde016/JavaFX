@@ -5,6 +5,8 @@ import javafx.scene.control.TextField;
 public class Functionality {
 
 	/**
+	 * Tar in en TextField från klassen "Miniraknaren" och gör om den till en string[].
+	 * Därefter utför den beräkningar med alla siffror beroende på vad för tecken som finns emellan.
 	 * 
 	 * @param input
 	 */
@@ -44,14 +46,13 @@ public class Functionality {
 				content[0] = Double.toString(h.Calc(Double.parseDouble(content[0]), Double.parseDouble(content[i+1])));
 
 			}
-			else {
-					//Ja du, else vad?
-			}
 		}
 		outputs(content);
 		
 	}
 	/**
+	 * Skickar svaret från tidigare utförda ekvationer till en metod i klassen "Miniraknaren". 
+	 * Där skrivs svaret ut i en TextField. 
 	 * 
 	 * @param content
 	 */
