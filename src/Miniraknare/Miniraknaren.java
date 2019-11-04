@@ -22,8 +22,6 @@ public class Miniraknaren extends Application {
 		
 		VBox displayField = new VBox();
 
-		// Note: Dubbel tecken fungerar inte i miniräknaren (t.ex 50 + - 50)
-
 		GridPane numpad = new GridPane();
 		
 		inputField.setText("");

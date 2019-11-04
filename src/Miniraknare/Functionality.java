@@ -11,7 +11,7 @@ public class Functionality {
 	 * @param input
 	 */
 	public static void Inputs(TextField input) {
-		String[] content = input.getText().split(" "); // Gör en string[] av TextField
+		String[] content = input.getText().split(" ");
 		for (int i = 0; i < content.length - 1; i++) {
 			
 			if (content[i].equals("+")) {
@@ -37,12 +37,12 @@ public class Functionality {
 
 			} else if (content[i].equals("\u221A")) {
 				
-				Calculations g = new SquareRoot(); //Fixa detta.
+				Calculations g = new SquareRoot();
 				content[0] = Double.toString(g.Sqrt(Double.parseDouble(content[i+1])));
 
 			} else if (content[i].equals("%")) {
 				
-				Calculations h = new Procent(); //Fixa detta.
+				Calculations h = new Procent();
 				content[0] = Double.toString(h.Calc(Double.parseDouble(content[0]), Double.parseDouble(content[i+1])));
 
 			}
